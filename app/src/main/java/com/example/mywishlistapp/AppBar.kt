@@ -18,7 +18,7 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun AppBarView(
     title:String,
-    onBackNavClicked:() -> Unit = {}
+    onBackNavClicked:() -> Unit = {}//back에 대한 event ramda
 )
 {
     val navigationIcon : (@Composable () -> Unit)? =
@@ -43,6 +43,7 @@ fun AppBarView(
         }
 
     //color의 경우 res의 values 패키지 안에 있는 colors에 white 색을 사용하겠다는 의미
+    //즉 내가 직접 정의한 색상을 사용하겠다는 의미
     TopAppBar(title = { Text(text = title,color = colorResource(id = R.color.white),
         modifier = Modifier
             .padding(start = 4.dp)
